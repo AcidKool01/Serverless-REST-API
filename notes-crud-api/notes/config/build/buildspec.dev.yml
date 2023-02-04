@@ -18,14 +18,12 @@ phases:
       - npm test
       - echo Packaging the services
       - serverless package --package my-artifact --stage dev
-    finally:
-      - command
-      - command
+
 artifacts:
   files:
     - my-artifact/*
-    name: MyProjectArtifacts
-  name: artifact-name
+  name: MyProjectArtifacts
+  
 cache:
   paths:
     - 'notes/node-modules/**/*'
